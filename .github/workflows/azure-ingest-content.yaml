@@ -38,4 +38,4 @@ jobs:
 
           github_token=$(echo "$STREAMX_GH_AUTH_TOKEN" | yq e '.data.jwt' - | base64 --decode)
           echo "%github.streamx.ingestion.auth-token=$github_token" >> .env
-          terraform/scripts/cloud-publish-all.sh
+          echo $(cat .env)
