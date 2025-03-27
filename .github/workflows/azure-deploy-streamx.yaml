@@ -9,7 +9,7 @@ on:
       load_initial_data:
         description: "Load initial data"
         required: false
-        type: boolean
+        type: string
         default: false
     secrets:
       SX_SEC_AUTH_PRIVATE_KEY:
