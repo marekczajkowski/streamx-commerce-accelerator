@@ -75,6 +75,7 @@ jobs:
           REST_INGESTION_TLS_CERT: ${{ secrets.REST_INGESTION_TLS_CERT }}
           GRAFANA_TLS_CERT: ${{ secrets.GRAFANA_TLS_CERT }}
         run: |
+          echo ${{ inputs.load_initial_data }}
           mkdir -p gateway/tls
           mkdir -p mesh/auth
           
